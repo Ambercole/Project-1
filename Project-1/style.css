@@ -1,5 +1,5 @@
 html{
-  background-color: rgb(83,	81,	103);
+  background-color:#fff;
   margin:150px;
 }
 body{
@@ -8,16 +8,19 @@ body{
   /*font-family: 'Archivo', sans-serif;*/
 }
 section {
-  color: #fff;
+  color: black;
   font-size: 30px;
   width: 500px;
   margin: 5px;
   text-align: center;
   line-height: 300px;
+  background: grey;
+  margin:20px;
+  border-radius: 5px;
 }
 button {
   margin-top: 20px;
-  line-height: 50px;
+  line-height: 30px;
   font-weight: bold;
   padding: 0 40px;
   background: grey;
@@ -28,14 +31,9 @@ button:hover {
   background: lightsalmon;
 }
 #hint{
-  color: #fff;
+  
+  color:black;
   font-size: 20px;
-  width: 500px;
-  margin: 5px;
   text-align: center;
-  background: rgb(83,	81,	103);
+  background-color: white;
   }
-#Question{
-  background-image: url("../img/flashcard.jpg");
-  margin:20px;
-}
