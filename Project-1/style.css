@@ -1,0 +1,41 @@
+html{
+  background-color: rgb(83,	81,	103);
+  margin:150px;
+}
+body{
+  margin: 0 auto;
+  text-align: center;
+  /*font-family: 'Archivo', sans-serif;*/
+}
+section {
+  color: #fff;
+  font-size: 30px;
+  width: 500px;
+  margin: 5px;
+  text-align: center;
+  line-height: 300px;
+}
+button {
+  margin-top: 20px;
+  line-height: 50px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: grey;
+  border: none;
+  text-align: center;
+}
+button:hover {
+  background: lightsalmon;
+}
+#hint{
+  color: #fff;
+  font-size: 20px;
+  width: 500px;
+  margin: 5px;
+  text-align: center;
+  background: rgb(83,	81,	103);
+  }
+#Question{
+  background-image: url("../img/flashcard.jpg");
+  margin:20px;
+}
