@@ -6,41 +6,19 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>GA Trivia</h1>
+    <h1>Get to Know Me Trivia</h1>
 
-    <main>
-      <section id="Question">question here</section>
-      <button onclick="myFunction1()">answer 1</button>
-      <button onclick="myFunction2()">answer 2</button>
-      <button onclick="myFunction3()">answer 3</button>
-      <button id ="hint"onclick="function hint()">*HINT*</h3>
-
-      <section id="Question">question here</section>
-      <button onclick="myFunction1()">answer 1</button>
-      <button onclick="myFunction2()">answer 2</button>
-      <button onclick="myFunction3()">answer 3</button>
-      <button id ="hint"onclick="function hint()">*HINT*</h3>
-
-      <section id="Question">question here</section>
-      <button onclick="myFunction1()">answer 1</button>
-      <button onclick="myFunction2()">answer 2</button>
-      <button onclick="myFunction3()">answer 3</button>
-      <button id ="hint"onclick="function hint()">*HINT*</h3>
-  
-      <section id="Question">question here</section>
-      <button onclick="myFunction1()">answer 1</button>
-      <button onclick="myFunction2()">answer 2</button>
-      <button onclick="myFunction3()">answer 3</button>
-      <button id ="hint"onclick="function hint()">*HINT*</h3>
-
-      <section id="Question">question here</section>
-      <button onclick="myFunction1()">answer 1</button>
-      <button onclick="myFunction2()">answer 2</button>
-      <button onclick="myFunction3()">answer 3</button>
-      <button id ="hint"onclick="function hint()">*HINT*</h3>
-
-    </main>
-
-</body>
-<script src="project.js"></script>
+    <div id="quiz"></div>
+      <button id="A"></button>
+      <button id="B"></button>
+      <button id="C"></button>
+      <button id="next">Next Question</button>
+      <button id="submit">Submit Quiz</button>
+      <div id="results"></div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="trivia.js"></script>
 </html>
