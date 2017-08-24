@@ -7,10 +7,9 @@ const answers = $('#answers')
 let oneButton = $('#A')
 let twoButton = $('#B')
 let threeButton = $('#C')
+let Score = 0
+let counter = 0 // use this to access the question
 
-var counter = 0 // use this to access the question
-const rightAnswer = {
-  display: "You are right "}
 const myQuestions = [
   {
     question: "What's the name of Bellatrix' husband?",
@@ -57,6 +56,7 @@ for (var i = 0; i < myQuestions.length; i++) {
             var index = [i];
             if (i === myQuestions[currentQuestion].correctAnswer) {
                 alert("That is correct");
+                return Score++
 
 
             }
@@ -64,7 +64,7 @@ for (var i = 0; i < myQuestions.length; i++) {
 
             if (i !== myQuestions[currentQuestion].correctAnswer) {
               alert("That is incorrect");
-
+              return Score--
 
             }
 
@@ -83,6 +83,7 @@ for (var i = 0; i < myQuestions.length; i++) {
     }
     return counter++;
     concole.log("hello")
+    feedbackcontainer.text("Score: " + "" + Score)
   }
 
 //   const output = [];

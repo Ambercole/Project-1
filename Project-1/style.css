@@ -2,18 +2,19 @@ html{
 
   margin:25px;
   width: auto;
-  background-image: url("img/harry.jpg");
+  background-image: url("img/harryP.jpg");
   background-size:1000px;
+
 
 }
 body{
   margin: 0 auto;
   text-align: center;
-  background-color: white;
 }
 h1 {
   font-family: 'Zilla Slab Highlight', cursive;
-  font-size: 50px;
+  font-size: 70px;
+
 }
 section {
   color: black;
@@ -27,21 +28,23 @@ section {
   border-radius: 5px;
 }
 button {
-  margin-top: 20px;
-  line-height: 30px;
-  font-weight: bold;
-  padding: 0 40px;
   background: grey;
-  border: none;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  height: 70px;
+  width: 190px;
+  line-height: 60px;
+  margin: 25px 25px;
   text-align: center;
-  color:rgb(196, 176,	164);
-  font-family: 'Abril Fatface', cursive;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border: 0;
+  transition: all 0.3s ease 0s;
+
 }
 button:hover {
-  background: rgb(209, 140,	177);
+  background: rgb(33,	37,	43);
 }
 #quiz {
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Cinzel', serif;
+  font-size: 35px;
 }
