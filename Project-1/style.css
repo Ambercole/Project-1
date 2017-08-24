@@ -1,11 +1,15 @@
 html{
-  background-color:rgb(196, 176,	164);
-  margin:150px;
+
+  margin:25px;
   width: auto;
+  background-image: url("img/harry.jpg");
+  background-size:1000px;
+
 }
 body{
   margin: 0 auto;
   text-align: center;
+  background-color: white;
 }
 h1 {
   font-family: 'Zilla Slab Highlight', cursive;

@@ -13,69 +13,125 @@ const rightAnswer = {
   display: "You are right "}
 const myQuestions = [
   {
-    question: "What is Ambers favorite color?",
-    answers: ["Blue","Pink","Orange"],
-    correctAnswer: "Orange"
+    question: "What's the name of Bellatrix' husband?",
+    answers: ["Albert Lestrange","Adolph Lestrange","Rodolphus Lestrange"],
+    correctAnswer: "Rodolphus Lestrange"
   },
   {
-    question: "What does Amber like to drink in the morning?",
-    answers: ["Coffee","Tea","Frappuccino"],
-    correctAnswer: "Tea"
+    question: "What class did Neville end up teaching at Hogwarts?",
+    answers: ["Muggle Studies","Herbology","Astronomy"],
+    correctAnswer: "Herbology"
   },
   {
-    question: "What does Amber have as her computers screen saver?",
-    answers: ["A picture of a Spinx Cat","A picture of her Family","Amber Rose and Kanye West"],
-    correctAnswer: "Amber Rose and Kanye West"
+    question: "Which newspaper does Rita Skeeter work for?",
+    answers: ["The Daily Prophet","The Quibler","New York Times"],
+    correctAnswer: "The Daily Prophet"
   },
   {
-    question: "What is Ambers last name?",
-    answers: ["Coleman","Kamara","Kamara"],
-    correctAnswer: "Coleman"
+    question: "Which Hogwarts house did Moaning Myrtle belong in?",
+    answers: ["ryffindor","Slytherin","Ravenclaw"],
+    correctAnswer: "Ravenclaw"
 },
 {
-    question: "Is Amber a DC Native?",
-    answers: ["Yes","possibly","No"],
-    correctAnswer: "No"
+    question: "Which was not one of Voldemort's Horcruxes?",
+    answers: ["Tom Riddles Diary","Helga's Diadem","Harry"],
+    correctAnswer: "Helga's Diadem"
   }
 ]
-var currentQuestion = myQuestions[counter]
+
 function buildQuiz(){
-  const output = [];
-  var newQuestion = myQuestions[Math.floor(myQuestions.length * Math.random())];
+  const output = []
+var newQuestion = myQuestions[counter];
 quizContainer.text(newQuestion.question)
 oneButton.text(newQuestion.answers[0])
 twoButton.text(newQuestion.answers[1])
 threeButton.text(newQuestion.answers[2])
+var currentQuestion = 0
+for (var i = 0; i < myQuestions.length; i++) {
+        var selection = myQuestions[i];
 
 
-console.log($(this).text())
-}
+         if (selection.clicked) {
 
-function showResults(){
 
-}
+            var index = [i];
+            if (i === myQuestions[currentQuestion].correctAnswer) {
+                alert("That is correct");
+
+
+            }
+
+
+            if (i !== myQuestions[currentQuestion].correctAnswer) {
+              alert("That is incorrect");
+
+
+            }
+
+
+            if (currentQuestion < myQuestions.length -1) {
+                currentQuestion++;
+
+
+
+
+            } else {
+                alert('End of quiz');
+            }
+            break;
+        }
+    }
+    return counter++;
+    concole.log("hello")
+  }
+
+//   const output = [];
+
+
+
 function nextQuestion(){
 
 buildQuiz()
 }
-function showCorrect1(){
-if (((this).text())===myQuestion.correctAnswer.text())
-
- feedbackcontainer.text("Correct!")
- else {
-   feedbackcontainer.text("Incorrect :(")
- }
-}
-
-
+// function showCorrect1(){
+// if (((this).text())===myQuestion.correctAnswer.text())
+//
+//  feedbackcontainer.text("Correct!")
+//  else {
+//    feedbackcontainer.text("Incorrect :(")
+//  }
+// }
+//
+//
 nextButton.on('click', nextQuestion)
-threeButton.on('click', showCorrect1)
-twoButton.on('click', showCorrect1)
-oneButton.on('click', showCorrect1)
-submitButton.on('click', showResults())
+threeButton.on('click', right3)
+twoButton.on('click', right2)
+oneButton.on('click', right1)
 
-
-// myQuestions.answers
-
-//create button function to display answer and why or why not
-//create questions to show on flashcard
+function right1(){
+  if(oneButton.text() === myQuestions[counter - 1].correctAnswer){
+    alert("Correct!")
+  } else {
+    alert("Incorrect!")
+  }
+}
+function right2(){
+  if(twoButton.text() === myQuestions[counter - 1].correctAnswer){
+    alert("Correct!")
+  } else {
+    alert("Incorrect!")
+  }
+}
+function right3(){
+  if(threeButton.text() === myQuestions[counter - 1].correctAnswer){
+    alert("Correct!")
+  } else {
+    alert("Incorrect!")
+  }
+}
+//
+//
+// // myQuestions.answers
+//
+// //create button function to display answer and why or why not
+// //create questions to show on flashcard
