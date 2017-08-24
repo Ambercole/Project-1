@@ -130,9 +130,3 @@ function right3(){
     alert("Incorrect!")
   }
 }
-//
-//
-// // myQuestions.answers
-//
-// //create button function to display answer and why or why not
-// //create questions to show on flashcard
