@@ -1,10 +1,12 @@
 const quizContainer = $('#quiz')
 // const resultContainer = $('#results')
+const feedbackcontainer = $('#feedback')
 const submitButton = $('#submit')
 const nextButton = $('#next')
-let answer1 = $('#A')
-let answer2 = $('#B')
-let answer3 = $('#C')
+const answers = $('#answers')
+let oneButton = $('#A')
+let twoButton = $('#B')
+let threeButton = $('#C')
 
 var counter = 0 // use this to access the question
 const rightAnswer = {
@@ -12,60 +14,39 @@ const rightAnswer = {
 const myQuestions = [
   {
     question: "What is Ambers favorite color?",
-    answers: {
-      A:"Blue",
-      B:"Pink",
-      C:"Orange"
-  },
+    answers: ["Blue","Pink","Orange"],
     correctAnswer: "Orange"
   },
   {
     question: "What does Amber like to drink in the morning?",
-    answers: {
-        A:"Coffee",
-        B:"Tea",
-        C:"Frappuccino"
-      },
+    answers: ["Coffee","Tea","Frappuccino"],
     correctAnswer: "Tea"
   },
   {
     question: "What does Amber have as her computers screen saver?",
-    answers: {
-        A:"A picture of a Spinx Cat",
-        B:"A picture of her Family",
-        C:"Amber Rose and Kanye West"
-      },
+    answers: ["A picture of a Spinx Cat","A picture of her Family","Amber Rose and Kanye West"],
     correctAnswer: "Amber Rose and Kanye West"
   },
   {
     question: "What is Ambers last name?",
-    answers: {
-        A:"Coleman",
-        B:"Kamara",
-        C:"Kamara"
-      },
+    answers: ["Coleman","Kamara","Kamara"],
     correctAnswer: "Coleman"
 },
 {
     question: "Is Amber a DC Native?",
-    answers: {
-        A:"Yes",
-        B:"possibly",
-        C:"No"
-      },
+    answers: ["Yes","possibly","No"],
     correctAnswer: "No"
   }
 ]
-
 var currentQuestion = myQuestions[counter]
 function buildQuiz(){
   const output = [];
   var newQuestion = myQuestions[Math.floor(myQuestions.length * Math.random())];
-
 quizContainer.text(newQuestion.question)
-answer1.text(newQuestion.answers.A)
-answer2.text(newQuestion.answers.B)
-answer3.text(newQuestion.answers.C)
+oneButton.text(newQuestion.answers[0])
+twoButton.text(newQuestion.answers[1])
+threeButton.text(newQuestion.answers[2])
+
 
 console.log($(this).text())
 }
@@ -77,16 +58,21 @@ function nextQuestion(){
 
 buildQuiz()
 }
-function showCorrect(){
-if (currentQuestion.answers.A===currentQuestion.correctAnswer)
- quizContainer.text(rightAnswer.display)
- 
+function showCorrect1(){
+if (((this).text())===myQuestion.correctAnswer.text())
+
+ feedbackcontainer.text("Correct!")
+ else {
+   feedbackcontainer.text("Incorrect :(")
+ }
 }
 
-nextButton.on('click', nextQuestion)
 
-answer1.on('click', showCorrect)
-// submitButton.on('click', showResults())
+nextButton.on('click', nextQuestion)
+threeButton.on('click', showCorrect1)
+twoButton.on('click', showCorrect1)
+oneButton.on('click', showCorrect1)
+submitButton.on('click', showResults())
 
 
 // myQuestions.answers
